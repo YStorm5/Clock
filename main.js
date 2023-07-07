@@ -1,72 +1,107 @@
-var date = new Date();
-let hour = date.getHours();
-let minute = date.getMinutes();
-let second = date.getSeconds();
-console.log(`${hour} ${minute} ${second}`);
-var num = 1;
-let main = document.getElementsByClassName("main")[0];
-let flip = document.getElementsByClassName("flip-card-inner")[0];
-let lower = document.getElementsByClassName("lower")[0];
-let front = document.getElementsByClassName("flip-card-front")[0];
-let back = document.getElementsByClassName("flip-card-back")[0];
-
+// let second = new Date().getSeconds();
+// let num = parseInt(second.toString().charAt(second.toString().length - 1));
+// let main = document.getElementsByClassName("main")[0];
+// let flip = document.getElementsByClassName("flip-card-inner")[0];
+// let lower = document.getElementsByClassName("lower")[0];
+// let front = document.getElementsByClassName("flip-card-front")[0];
+// let back = document.getElementsByClassName("flip-card-back")[0];
 // setInterval(() => {
-//   num = num > 9 ? 1 : num;
+//   let second = new Date().getSeconds();
+//   num = parseInt(second.toString().charAt(second.toString().length - 1));
+// }, 100);
+// setInterval(() => {
+//   main.innerHTML = num + 1 > 9 ? 0 : num + 1;
+//   back.innerHTML = num + 1 > 9 ? 0 : num + 1;
+// }, 1000);
+// setInterval(() => {
 //   front.innerHTML = num;
 //   lower.innerHTML = num;
-//   main.innerHTML = num + 1 > 9 ? 1 : num + 1;
-//   flip.style.transition = "transform 2.5s";
-//   flip.style.transform = "rotateX(-90deg)";
-//   setTimeout(() => {
-//     flip.style.transition = "transform 2.5s";
-//     flip.style.transform = "rotateX(-180deg)";
-//     main.style.zIndex = 10;
-//     lower.style.zIndex = 1;
-//     back.innerHTML = num + 1 > 9 ? 1 : num + 1;
-//   }, 2500);
-//   setTimeout(() => {
-//     front.innerHTML = num + 1 > 9 ? 1 : num + 1;
-//     lower.innerHTML = num + 1 > 9 ? 1 : num + 1;
-//     lower.style.zIndex = 10;
-//     main.style.zIndex = 1;
-//     flip.style.transform = "";
-//     flip.style.transition = "none";
-//     num += 1;
-//   }, 5000);
-// }, 5000);
-flip.style.transition = "transform 0.5s";
-flip.style.transform = "rotateX(-150deg)";
-main.style.zIndex = 0;
-flip.style.zIndex = 10;
-main.style.zIndex = 11;
-lower.style.zIndex = 1;
+// }, 999);
 
-// setInterval(() => {
-//   front.style.zIndex = 10;
-//   main.style.zIndex = 1;
-//   lower.style.zIndex = 10;
-//   back.style.zIndex = 1;
-//   num = num > 9 ? 1 : num;
-//   main.innerHTML = num + 1 > 9 ? 1 : num + 1;
+// Second (second)
+setInterval(() => {
+  let el = document.getElementsByClassName("second-second")[0];
+  let main = document.getElementsByClassName("el main")[0];
+  let lower = el.getElementsByClassName("lower")[0];
+  let flip = el.getElementsByClassName("flip-card-inner")[0];
+  let front = el.getElementsByClassName("flip-card-front")[0];
+  let back = el.getElementsByClassName("flip-card-back")[0];
+  flip.style.animation = "flip 1s";
+  setTimeout(() => {
+    flip.style.animation = "none";
+  }, 900);
+}, 1000);
 
-//   flip.style.transition = "transform 0.5s";
-//   flip.style.transform = "rotateX(-30deg)";
+// Second (first)
+setInterval(() => {
+  let el = document.getElementsByClassName("first-second")[0];
+  let main = document.getElementsByClassName("el main")[0];
+  let lower = el.getElementsByClassName("lower")[0];
+  let flip = el.getElementsByClassName("flip-card-inner")[0];
+  let front = el.getElementsByClassName("flip-card-front")[0];
+  let back = el.getElementsByClassName("flip-card-back")[0];
+  flip.style.animation = "flip 1s";
+  setTimeout(() => {
+    flip.style.animation = "none";
+  }, 1000);
+}, 10000);
 
-//   setTimeout(() => {
-//     main.style.zIndex = 10;
-//     lower.style.zIndex = 1;
-//     front.style.zIndex = 1;
-//     back.style.zIndex = 10;
-//     back.innerHTML = num + 1 > 9 ? 1 : num + 1;
-//     flip.style.transition = "transform 0.5s";
-//     flip.style.transform = "rotateX(-180deg)";
-//   }, 500);
+// Minute (second)
 
-//   setTimeout(() => {
-//     num = num + 1;
-//     lower.innerHTML = num;
-//     front.innerHTML = num;
-//     flip.style.transition = "none";
-//     flip.style.transform = "";
-//   }, 1000);
-// }, 1000);
+setInterval(() => {
+  let el = document.getElementsByClassName("second-minute")[0];
+  let main = document.getElementsByClassName("el main")[0];
+  let lower = el.getElementsByClassName("lower")[0];
+  let flip = el.getElementsByClassName("flip-card-inner")[0];
+  let front = el.getElementsByClassName("flip-card-front")[0];
+  let back = el.getElementsByClassName("flip-card-back")[0];
+  flip.style.animation = "flip 1s";
+  setTimeout(() => {
+    flip.style.animation = "none";
+  }, 1000);
+}, 60000);
+
+// Minute (first)
+
+setInterval(() => {
+  let el = document.getElementsByClassName("first-minute")[0];
+  let main = document.getElementsByClassName("el main")[0];
+  let lower = el.getElementsByClassName("lower")[0];
+  let flip = el.getElementsByClassName("flip-card-inner")[0];
+  let front = el.getElementsByClassName("flip-card-front")[0];
+  let back = el.getElementsByClassName("flip-card-back")[0];
+  flip.style.animation = "flip 1s";
+  setTimeout(() => {
+    flip.style.animation = "none";
+  }, 1000);
+}, 600000);
+
+// Hour (second)
+
+setInterval(() => {
+  let el = document.getElementsByClassName("second-hour")[0];
+  let main = document.getElementsByClassName("el main")[0];
+  let lower = el.getElementsByClassName("lower")[0];
+  let flip = el.getElementsByClassName("flip-card-inner")[0];
+  let front = el.getElementsByClassName("flip-card-front")[0];
+  let back = el.getElementsByClassName("flip-card-back")[0];
+  flip.style.animation = "flip 1s";
+  setTimeout(() => {
+    flip.style.animation = "none";
+  }, 1000);
+}, 3600000);
+
+// Hour (first)
+
+setInterval(() => {
+  let el = document.getElementsByClassName("first-hour")[0];
+  let main = document.getElementsByClassName("el main")[0];
+  let lower = el.getElementsByClassName("lower")[0];
+  let flip = el.getElementsByClassName("flip-card-inner")[0];
+  let front = el.getElementsByClassName("flip-card-front")[0];
+  let back = el.getElementsByClassName("flip-card-back")[0];
+  flip.style.animation = "flip 1s";
+  setTimeout(() => {
+    flip.style.animation = "none";
+  }, 36001000);
+}, 36000000);
