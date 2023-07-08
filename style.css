@@ -28,6 +28,7 @@
   width: 100%;
   height: var(--height);
   display: flex;
+  justify-content: center;
   gap: 100px;
 }
 .hour,
