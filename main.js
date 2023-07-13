@@ -195,19 +195,19 @@ setInterval(() => {
     0
   ) {
     if (minute.toString().length < 2) {
-      fmin = 0;
+      fmin = parseInt(0);
     } else {
-      fmin = minute.toString().charAt(0);
+      fmin = parseInt(minute.toString().charAt(0));
     }
     firstmin_front.innerHTML = fmin;
     firstmin_lower.innerHTML = fmin;
-    firstmin_main.innerHTML = fmin + 1 > 9 ? 0 : fmin + 1;
-    firstmin_back.innerHTML = fmin + 1 > 9 ? 0 : fmin + 1;
+    firstmin_main.innerHTML = fmin + 1 > 5 ? 0 : fmin + 1;
+    firstmin_back.innerHTML = fmin + 1 > 5 ? 0 : fmin + 1;
     firstmin_flip.style.animation = "flip 0.9s";
     setTimeout(() => {
       firstmin_flip.style.animation = "none";
-      firstmin_front.innerHTML = fmin + 1 > 9 ? 0 : fmin + 1;
-      firstmin_lower.innerHTML = fmin + 1 > 9 ? 0 : fmin + 1;
+      firstmin_front.innerHTML = fmin + 1 > 5 ? 0 : fmin + 1;
+      firstmin_lower.innerHTML = fmin + 1 > 5 ? 0 : fmin + 1;
     }, 800);
   }
 
@@ -217,11 +217,11 @@ setInterval(() => {
 
   if ((parseInt(second + 1) * parseInt(minute + 1)) % 3600 === 0) {
     if (hour.length < 2) {
-      sh = hour.charAt(0);
+      sh = parseInt(hour.charAt(0));
       fh = 0;
     } else {
-      sh = hour.charAt(1);
-      fh = hour.charAt(0);
+      sh = parseInt(hour.charAt(1));
+      fh = parseInt(hour.charAt(0));
     }
     sechour_front.innerHTML = sh;
     sechour_lower.innerHTML = sh;
